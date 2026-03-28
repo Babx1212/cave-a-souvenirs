@@ -1,21 +1,12 @@
 // ============================================================
 //  DATA.JS — Le seul fichier à modifier pour ajouter une soirée
-//  Pour ajouter une session : copiez un bloc { ... } dans
-//  le tableau sessions[] et remplissez les champs.
 // ============================================================
 
 const CLUB = {
   name: "La Cave à Souvenirs",
   subtitle: "Chroniques de nos soirées dégustation",
   members: ["Bastien", "Théodore", "Nathan", "Clémentin", "Fabien", "Gautier", "Hugo", "Ilan", "Imran", "Lino"],
-
-  // ── SESSIONS ──────────────────────────────────────────────
-  // La plus récente en premier
   sessions: [
-
-    // ─────────────────────────────────────────────
-    // SESSION 1 — Soirée fondatrice
-    // ─────────────────────────────────────────────
     {
       id: "2026-03-26",
       date: "26 mars 2026",
@@ -28,146 +19,165 @@ const CLUB = {
       wines: [
         {
           name: "Champagne Beaugrand",
-          domain: "Beaugrand",
+          domain: "Champagne Hélène Beaugrand",
+          winemaker: "Hélène Beaugrand",
           vintage: "NV",
-          appellation: "Champagne",
+          appellation: "Champagne AOP",
           region: "Champagne — France",
+          village: "Montgueux, Aube",
           type: "pétillant",
-          grape: "Assemblage champenois",
+          grape: "Chardonnay",
           score: 88,
           nose: "Pomme, agrumes, brioche légère",
           palate: "Vive, fraîche, droite, bulle fine",
           pairing: "Idéal pour l'apéritif, s'accorde bien avec les mises en bouche légères",
-          notes: "Longueur moyenne, nette. Un champagne élégant pour lancer la soirée. Référence CellarTracker : 88,5."
+          notes: "Hélène Beaugrand est une récoltante-manipulante installée à Montgueux (Aube) depuis 2018, sur 3 hectares de Chardonnay plantés sur la craie caractéristique de ce village exceptionnel. Quatrième génération d'une famille dont la rue principale du village porte le nom. Référence CellarTracker : 88,5."
         },
         {
-          name: "Chinon Blanc",
-          domain: "Éric Hérault",
+          name: "Chinon Blanc « L'Hérault-in »",
+          domain: "Domaine Éric Hérault",
+          winemaker: "Éric Hérault",
           vintage: "—",
-          appellation: "Chinon Blanc",
+          appellation: "Chinon AOP",
           region: "Vallée de la Loire — France",
+          village: "Panzoult, Indre-et-Loire",
           type: "blanc",
           grape: "Chenin Blanc",
           score: 88,
           nose: "Citron, coing, fleurs blanches, miel léger",
           palate: "Tendue, acide, texture cireuse",
           pairing: "Belle alliance avec la salade printanière et les poissons fins",
-          notes: "Un Chinon blanc de caractère, rare et déroutant. Vivino 4,4/5 — belle découverte du terroir ligérien."
+          notes: "Éric Hérault vinifie depuis 1992 dans une ancienne ferme du 17e siècle à Panzoult, dépendance du château local. Le domaine s'étend sur 26 hectares avec une cave creusée dans le tuffeau calcaire du 14e siècle. Un Chinon blanc de caractère, rare et déroutant. Vivino 4,4/5."
         },
         {
           name: "Histoire d'Énfer",
-          domain: "Cave du Valais",
+          domain: "Domaine Histoire d'Énfer",
+          winemaker: "Dr. Patrick Regamey",
           vintage: "—",
           appellation: "Valais AOC",
           region: "Valais — Suisse",
+          village: "Corin-sur-Sierre, Valais",
           type: "blanc",
-          grape: "Assemblage valaisan",
+          grape: "Assemblage valaisan (Petite Arvine, Humagne Blanche, Chardonnay)",
           score: 83,
           nose: "Fruits à chair blanche, herbes alpines, légère minéralité",
           palate: "Souple, rond, finale courte",
           pairing: "Agréable à l'apéritif ou sur une fondue légère",
-          notes: "Un vin valaisan accessible, sans prétention mais plaisant. Moins de références disponibles en ligne pour ce cru."
+          notes: "Domaine fondé en 2008 par le Dr. Patrick Regamey à Corin-sur-Sierre. 12 hectares de vignes cultivées en bio sur les terrasses escarpées du Valais, côté Sierre et Salquenen. Le nom s'inspire de la Côte d'Enfer, une parcelle raide dominant la vallée du Rhône. Plus de 20 cuvées différentes produites sur le domaine."
         },
         {
           name: "Meursault 2019",
-          domain: "Domaine non communiqué",
+          domain: "Domaine Albert Grivault",
+          winemaker: "Michel Bardet & Claire Bardet",
           vintage: 2019,
-          appellation: "Meursault",
+          appellation: "Meursault AOP",
           region: "Côte de Beaune, Bourgogne — France",
+          village: "Meursault, Côte-d'Or",
           type: "blanc",
           grape: "Chardonnay",
           score: 92,
           nose: "Beurre noisette, vanille, agrumes confits, fleurs blanches",
           palate: "Gras, ample, belle tension minérale, longue finale beurrée",
           pairing: "Accord classique avec les poissons en sauce et les volailles",
-          notes: "Le grand Bourgogne blanc de la soirée — typicité Meursault irréprochable. Millésime 2019 très bien côté en Bourgogne."
+          notes: "Domaine fondé en 1873 par Albert Grivault, aujourd'hui conduit par Michel Bardet et sa fille Claire. Le domaine possède deux monopoles d'exception à Meursault : le Clos des Perrières (1er Cru, 1 ha, souvent comparé à Montrachet) et le Clos du Murger. 6 hectares en tout, une adresse de référence absolue en Bourgogne blanche."
         },
         {
           name: "Arbin Mondeuse « 1952 »",
-          domain: "Domaine non communiqué",
+          domain: "Domaine Fabien Trosset",
+          winemaker: "Fabien Trosset",
           vintage: "1952",
-          appellation: "Arbin",
+          appellation: "Vin de Savoie — Cru Arbin AOP",
           region: "Savoie — France",
+          village: "Arbin, Savoie",
           type: "rouge",
           grape: "Mondeuse",
           score: 92,
           nose: "Violette, cerise noire, poivre, épices, légère truffe",
           palate: "Tannins fermes mais soyeux, acidité vive, belle longueur",
           pairing: "Parfait avec les viandes rouges, le gibier et les fromages de Savoie",
-          notes: "Révélation de la soirée : une Mondeuse d'Arbin vieillie avec grâce. Cépage rare et sous-estimé. RVF 92/100."
+          notes: "Fabien Trosset a repris le domaine familial en 2011 après le décès de son père. La cuvée « 1952 » rend hommage à l'année de naissance de ce père, et aux vignes plantées cette même année. Un cépage rare et sous-estimé : la Mondeuse d'Arbin est l'un des grands rouges de montagne français. RVF 92/100."
         },
         {
           name: "Guardia dei Mori",
           domain: "Guardia dei Mori",
+          winemaker: "—",
           vintage: "—",
-          appellation: "Toscane IGT",
-          region: "Toscane — Italie",
+          appellation: "Sangiovese IGT",
+          region: "Italie du Sud",
+          village: "Italie",
           type: "rouge",
           grape: "Sangiovese",
           score: 81,
           nose: "Cerise, cuir, légère rusticité, herbes sèches",
           palate: "Tannins un peu rugueux, acidité présente, finale courte",
           pairing: "Pizzas, pâtes bolognaise, cuisine italienne du quotidien",
-          notes: "Un vin de table honnête mais sans grande complexité. Vivino 3,3/5 — rapport qualité-prix correct."
+          notes: "Guardia dei Mori est un producteur italien proposant des vins de cépages accessibles en Italie du Sud (Pouilles, Sicile). Un vin de table honnête mais sans grande complexité. Vivino 3,3/5 — rapport qualité-prix correct."
         },
         {
-          name: "Grain par Grain",
-          domain: "Domaine non communiqué",
+          name: "Grain Noble",
+          domain: "Domaine Marie-Thérèse Chappaz",
+          winemaker: "Marie-Thérèse Chappaz",
           vintage: "—",
-          appellation: "Vin de France",
-          region: "France",
-          type: "rouge",
-          grape: "Cépage inconnu",
+          appellation: "Valais AOC — Grain Noble",
+          region: "Valais — Suisse",
+          village: "Fully, Valais",
+          type: "liquoreux",
+          grape: "Petite Arvine",
           score: 82,
-          nose: "Fruits rouges frais, floral, légèrement herbacé",
-          palate: "Léger, souple, peu tannique",
-          pairing: "Charcuteries, plats légers, à servir légèrement frais",
-          notes: "Un vin naturel ou de soif, agréable mais sans prétention. Peu de références trouvées en ligne."
+          nose: "Miel, abricot confit, agrumes confits, cire d'abeille",
+          palate: "Onctueux, sucrosité intense, belle acidité pour l'équilibre, finale persistante",
+          pairing: "Foie gras, fromages bleus, desserts aux fruits jaunes",
+          notes: "Marie-Thérèse Chappaz est l'une des vigneronnes les plus célèbres de Suisse. Basée à Fully (Valais) sur 8-10 hectares en biodynamie Demeter depuis 1997, elle est l'icône absolue du vignoble helvétique. Son Grain Noble Petite Arvine a été le premier vin suisse à obtenir 100/100 de Robert Parker Wine Advocate. Élue vigneronne de l'année SVS 2021."
         },
         {
-          name: "Héritage Chasse-Spleen 2020",
+          name: "L'Héritage de Chasse-Spleen 2020",
           domain: "Château Chasse-Spleen",
+          winemaker: "Céline Villars-Foubet",
           vintage: 2020,
-          appellation: "Moulis-en-Médoc",
+          appellation: "Moulis-en-Médoc AOP",
           region: "Bordeaux — France",
+          village: "Grand-Poujeaux, Moulis-en-Médoc",
           type: "rouge",
-          grape: "Merlot, Cabernet Sauvignon",
+          grape: "Cabernet Sauvignon, Merlot, Petit Verdot",
           score: 89,
           nose: "Cassis, cèdre, graphite, légère note toastée",
           palate: "Structuré, tannins présents mais élégants, belle longueur bordelaise",
           pairing: "Viandes rouges grillées, agneau rôti, fromages à pâte dure",
-          notes: "Le second vin de Chasse-Spleen tient bien son rang. James Suckling 92 pour le grand vin — l'Héritage suit à ~89."
+          notes: "Second vin du Château Chasse-Spleen, dirigé depuis 2000 par Céline Villars-Foubet (petite-fille du fondateur Jacques Merlaut). Le château est perché au point le plus haut de Grand-Poujeaux. L'Héritage tient bien son rang. James Suckling 92 pour le grand vin."
         },
         {
           name: "La Baronne",
           domain: "Château La Baronne",
+          winemaker: "Jean & Anne Lignères",
           vintage: "—",
-          appellation: "Corbières",
+          appellation: "Corbières AOP",
           region: "Languedoc — France",
+          village: "Fontcouverte, Aude",
           type: "rouge",
           grape: "Carignan, Grenache, Syrah",
           score: 90,
           nose: "Garrigue, fruits noirs, épices du Sud, olive noire",
           palate: "Charnu, généreux, finale poivrée et longue",
           pairing: "Daubes, cassoulet, viandes mijotées, fromages du Midi",
-          notes: "Belle expression des Corbières avec un superbe rapport qualité-prix. RVF 92 pour la cuvée phare du domaine."
+          notes: "Cinq générations de la famille Lignères à Fontcouverte, au pied de la Montagne d'Alaric dans les Corbières. Louis Lignères fondait la maison en 1890. Aujourd'hui Jean et Anne Lignères perpétuent une viticulture en biodynamie, respectueuse de la biodiversité. RVF 92 pour la cuvée phare."
         },
         {
           name: "Château Guiraud 2022",
           domain: "Château Guiraud",
+          winemaker: "Sandrine Garbay",
           vintage: 2022,
-          appellation: "Sauternes",
+          appellation: "Sauternes AOP — 1er Grand Cru Classé",
           region: "Bordeaux — France",
-          type: "blanc",
-          grape: "Sémillon, Sauvignon Blanc",
+          village: "Sauternes, Gironde",
+          type: "liquoreux",
+          grape: "Sémillon (65%), Sauvignon Blanc (35%)",
           score: 94,
           nose: "Abricot confit, miel d'acacia, vanille, ananas, zeste d'orange",
           palate: "Onctueux, sucrosité équilibrée par une belle acidité, finale interminable",
           pairing: "Foie gras, desserts aux fruits exotiques, roquefort",
-          notes: "Le grand finale de la soirée — un Sauternes 1er Grand Cru Classé exceptionnel. James Suckling 94-95/100."
+          notes: "Premier 1er Grand Cru Classé de Sauternes certifié en agriculture biologique (depuis 2011). Sandrine Garbay, ancienne maître de chai du Château d'Yquem, dirige le domaine depuis 2022. 128 hectares d'un seul tenant. Le grand finale de la soirée. James Suckling 94-95/100."
         }
       ]
     }
-
-  ] // fin sessions[]
-}; // fin CLUB
+  ]
+};
