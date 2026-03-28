@@ -25,6 +25,7 @@
   --rose-badge:    #c06080;
   --orange-badge:  #b8621a;
   --petillant-badge: #2d7a4f;
+  --liquoreux-badge: #b8860b;
 
   --font-titre: 'Cormorant Garamond', Georgia, serif;
   --font-corps: 'Raleway', sans-serif;
@@ -317,6 +318,7 @@ a   { color: inherit; text-decoration: none; }
 .badge-rose       { background: var(--rose-badge); }
 .badge-orange     { background: var(--orange-badge); }
 .badge-petillant  { background: var(--petillant-badge); }
+.badge-liquoreux  { background: var(--liquoreux-badge); }
 
 /* ── Page Session (vue détaillée) ────────────────────────── */
 .session-hero {
