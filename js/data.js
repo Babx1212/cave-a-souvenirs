@@ -50,20 +50,20 @@ const CLUB = {
           notes: "Éric Hérault vinifie depuis 1992 dans une ancienne ferme du 17e siècle à Panzoult, dépendance du château local. Le domaine s'étend sur 26 hectares avec une cave creusée dans le tuffeau calcaire du 14e siècle. Un Chinon blanc de caractère, rare et déroutant. Vivino 4,4/5."
         },
         {
-          name: "Histoire d'Énfer",
+          name: "L'Enfer du Schiste",
           domain: "Domaine Histoire d'Énfer",
           winemaker: "Dr. Patrick Regamey",
-          vintage: 2022,
+          vintage: "—",
           appellation: "Valais AOC",
           region: "Valais — Suisse",
           village: "Corin-sur-Sierre, Valais",
           type: "blanc",
-          grape: "Rèze",
+          grape: "Assemblage valaisan (Petite Arvine, Humagne Blanche, Chardonnay)",
           score: 83,
-          nose: "Résine, herbes alpines, minéralité, touche de chardonnay",
-          palate: "Typé, complexe, belle longueur en bouche, notes résineuses bien marquées",
+          nose: "Fruits à chair blanche, herbes alpines, légère minéralité",
+          palate: "Souple, rond, finale courte",
           pairing: "Agréable à l'apéritif ou sur une fondue légère",
-          notes: "Cépage autochtone valaisan rarissime, la Rèze est surtout connue dans le Vin du Glacier du Val d'Anniviers. Ce 2022 a bien résisté à la chaleur du millésime. Élevé en fût neuf, fût de passage et en cuve, il évoque le chardonnay avec une subtile touche résineuse. Domaine fondé en 2008 par le Dr. Patrick Regamey à Corin-sur-Sierre, 12 ha en bio."
+          notes: "Domaine fondé en 2008 par le Dr. Patrick Regamey à Corin-sur-Sierre. 12 hectares de vignes cultivées en bio sur les terrasses escarpées du Valais, côté Sierre et Salquenen. Le nom s'inspire de la Côte d'Enfer, une parcelle raide dominant la vallée du Rhône. Plus de 20 cuvées différentes produites sur le domaine."
         },
         {
           name: "Meursault 2019",
