@@ -33,8 +33,8 @@ function renderBadge(type) {
 
 // ── Rendu : barre de score ────────────────────────────────
 function renderScoreBar(score) {
-  // Les vins fins se situent entre 85 et 100 → on ramène à 0-100%
-  const pct = Math.max(0, Math.min(100, ((score - 80) / 20) * 100));
+  // Score direct sur 100 → jauge complète à 100 pts
+  const pct = Math.max(0, Math.min(100, score));
   return `
     <div class="wine-score-wrap">
       <div class="wine-score">${score}</div>
