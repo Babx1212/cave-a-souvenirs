@@ -1,0 +1,659 @@
+/* ============================================================
+   STYLE.CSS — Cave à Souvenirs
+   Palette : bordeaux foncé · crème · or · gris anthracite
+   ============================================================ */
+
+/* ── Imports ─────────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Raleway:wght@300;400;500;600&display=swap');
+
+/* ── Variables ───────────────────────────────────────────── */
+:root {
+  --bordeaux:     #6b1a2a;
+  --bordeaux-dark:#3d0d16;
+  --bordeaux-deep:#1a0508;
+  --or:           #c9a84c;
+  --or-light:     #e8d5a0;
+  --creme:        #f5f0e8;
+  --creme-dark:   #ede4d4;
+  --texte:        #2c1810;
+  --texte-light:  #6b5a4e;
+  --blanc:        #ffffff;
+  --gris-clair:   #f0ebe2;
+
+  --rouge-badge:   #8b1a2a;
+  --blanc-badge:   #4a6fa5;
+  --rose-badge:    #c06080;
+  --orange-badge:  #b8621a;
+  --petillant-badge: #2d7a4f;
+
+  --font-titre: 'Cormorant Garamond', Georgia, serif;
+  --font-corps: 'Raleway', sans-serif;
+
+  --radius: 12px;
+  --shadow: 0 4px 24px rgba(0,0,0,0.12);
+  --shadow-hover: 0 8px 40px rgba(0,0,0,0.22);
+  --transition: 0.3s ease;
+}
+
+/* ── Reset & Base ────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-corps);
+  background: var(--creme);
+  color: var(--texte);
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+img { max-width: 100%; display: block; }
+a   { color: inherit; text-decoration: none; }
+
+/* ── Header ──────────────────────────────────────────────── */
+.site-header {
+  background: var(--bordeaux-deep);
+  padding: 0 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 2px solid var(--or);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+.site-logo {
+  font-family: var(--font-titre);
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--or-light);
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.site-logo span { font-size: 1.4rem; }
+
+.header-nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.header-nav button {
+  background: none;
+  border: none;
+  color: var(--creme-dark);
+  font-family: var(--font-corps);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 0.3rem 0;
+  border-bottom: 2px solid transparent;
+  transition: color var(--transition), border-color var(--transition);
+}
+
+.header-nav button:hover,
+.header-nav button.active {
+  color: var(--or);
+  border-bottom-color: var(--or);
+}
+
+/* ── Hero (page d'accueil) ───────────────────────────────── */
+.hero {
+  background: linear-gradient(135deg, var(--bordeaux-deep) 0%, var(--bordeaux-dark) 60%, #5a1020 100%);
+  color: var(--creme);
+  text-align: center;
+  padding: 5rem 2rem 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c9a84c' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  pointer-events: none;
+}
+
+.hero-icon { font-size: 3rem; margin-bottom: 1rem; }
+
+.hero h1 {
+  font-family: var(--font-titre);
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  color: var(--or-light);
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  font-size: 1rem;
+  color: rgba(245,240,232,0.75);
+  font-weight: 300;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-number {
+  font-family: var(--font-titre);
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: var(--or);
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(245,240,232,0.6);
+  margin-top: 0.2rem;
+}
+
+/* ── Container ───────────────────────────────────────────── */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ── Section titre ───────────────────────────────────────── */
+.section-header {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 3rem 0 1.5rem;
+}
+
+.section-header h2 {
+  font-family: var(--font-titre);
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: var(--bordeaux-dark);
+}
+
+.section-header .line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, var(--or), transparent);
+}
+
+/* ── Session Cards (grille d'accueil) ────────────────────── */
+.sessions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.8rem;
+  padding-bottom: 4rem;
+}
+
+.session-card {
+  background: var(--blanc);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  transition: transform var(--transition), box-shadow var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.session-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
+}
+
+.card-banner {
+  height: 120px;
+  display: flex;
+  align-items: flex-end;
+  padding: 1rem 1.2rem;
+  position: relative;
+}
+
+.card-banner::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 30%, rgba(0,0,0,0.5) 100%);
+}
+
+.card-date {
+  font-family: var(--font-corps);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.9);
+  background: rgba(0,0,0,0.35);
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  position: relative;
+  z-index: 1;
+}
+
+.card-body { padding: 1.2rem 1.4rem 1rem; flex: 1; }
+
+.card-theme {
+  font-family: var(--font-titre);
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--bordeaux-dark);
+  line-height: 1.3;
+  margin-bottom: 0.4rem;
+}
+
+.card-host {
+  font-size: 0.82rem;
+  color: var(--texte-light);
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.card-wines {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.card-footer {
+  padding: 0.8rem 1.4rem;
+  border-top: 1px solid var(--gris-clair);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wines-count {
+  font-size: 0.78rem;
+  color: var(--texte-light);
+}
+
+.card-arrow {
+  font-size: 0.9rem;
+  color: var(--or);
+  font-weight: 600;
+}
+
+/* ── Badges type de vin ──────────────────────────────────── */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.55rem;
+  border-radius: 20px;
+  color: white;
+}
+
+.badge-rouge      { background: var(--rouge-badge); }
+.badge-blanc      { background: var(--blanc-badge); }
+.badge-rose       { background: var(--rose-badge); }
+.badge-orange     { background: var(--orange-badge); }
+.badge-petillant  { background: var(--petillant-badge); }
+
+/* ── Page Session (vue détaillée) ────────────────────────── */
+.session-hero {
+  padding: 3.5rem 1.5rem 2.5rem;
+  color: var(--creme);
+  position: relative;
+  overflow: hidden;
+}
+
+.session-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 50%, rgba(0,0,0,0.3) 100%);
+  pointer-events: none;
+}
+
+.session-hero .container { position: relative; z-index: 1; }
+
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.75);
+  background: rgba(0,0,0,0.25);
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 0.4rem 0.9rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all var(--transition);
+  margin-bottom: 2rem;
+}
+
+.back-btn:hover {
+  background: rgba(0,0,0,0.4);
+  color: var(--or-light);
+}
+
+.session-date-label {
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--or-light);
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.session-title {
+  font-family: var(--font-titre);
+  font-size: clamp(1.9rem, 4vw, 3rem);
+  font-weight: 400;
+  color: white;
+  line-height: 1.2;
+  margin-bottom: 1.8rem;
+}
+
+.session-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.88rem;
+  color: rgba(245,240,232,0.85);
+}
+
+.meta-icon { font-size: 1rem; }
+
+/* ── Contexte de la soirée ───────────────────────────────── */
+.session-context {
+  background: white;
+  border-radius: var(--radius);
+  padding: 2rem;
+  margin: 2rem 0;
+  box-shadow: var(--shadow);
+  border-left: 4px solid var(--or);
+}
+
+.context-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+@media (max-width: 640px) {
+  .context-grid { grid-template-columns: 1fr; }
+}
+
+.context-block h3 {
+  font-family: var(--font-titre);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--or);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.context-block p {
+  font-size: 0.92rem;
+  color: var(--texte);
+  line-height: 1.6;
+}
+
+.session-description {
+  font-family: var(--font-titre);
+  font-size: 1.15rem;
+  font-style: italic;
+  color: var(--texte-light);
+  line-height: 1.8;
+  padding: 1.2rem 0 0;
+  border-top: 1px solid var(--gris-clair);
+  margin-top: 1.2rem;
+  grid-column: 1 / -1;
+}
+
+/* ── Wine Cards ──────────────────────────────────────────── */
+.wines-section h2 {
+  font-family: var(--font-titre);
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--bordeaux-dark);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.wines-section h2::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, var(--or), transparent);
+}
+
+.wine-card {
+  background: white;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  transition: box-shadow var(--transition);
+}
+
+.wine-card:hover { box-shadow: var(--shadow-hover); }
+
+.wine-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 1.5rem;
+  border-bottom: 1px solid var(--gris-clair);
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.wine-info { flex: 1; }
+
+.wine-name {
+  font-family: var(--font-titre);
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--bordeaux-dark);
+  line-height: 1.2;
+}
+
+.wine-domain {
+  font-size: 0.85rem;
+  color: var(--texte-light);
+  margin-top: 0.2rem;
+}
+
+.wine-score-wrap {
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.wine-score {
+  font-family: var(--font-titre);
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--bordeaux);
+  line-height: 1;
+}
+
+.wine-score-label {
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--texte-light);
+}
+
+.score-bar-wrap {
+  width: 80px;
+  height: 4px;
+  background: var(--gris-clair);
+  border-radius: 2px;
+  margin-top: 0.3rem;
+}
+
+.score-bar {
+  height: 100%;
+  border-radius: 2px;
+  background: linear-gradient(to right, var(--bordeaux), var(--or));
+}
+
+.wine-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  background: var(--gris-clair);
+  border-bottom: 1px solid var(--creme-dark);
+}
+
+.tag {
+  font-size: 0.75rem;
+  color: var(--texte-light);
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.tag strong { color: var(--texte); }
+
+.wine-card-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+
+@media (max-width: 680px) {
+  .wine-card-body { grid-template-columns: 1fr; }
+}
+
+.tasting-block {
+  padding: 1.1rem 1.5rem;
+  border-right: 1px solid var(--gris-clair);
+  border-bottom: 1px solid var(--gris-clair);
+}
+
+.tasting-block:last-child  { border-right: none; }
+.tasting-block:nth-last-child(-n+2) { border-bottom: none; }
+
+.tasting-block h4 {
+  font-family: var(--font-corps);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--or);
+  margin-bottom: 0.4rem;
+}
+
+.tasting-block p {
+  font-size: 0.88rem;
+  color: var(--texte);
+  line-height: 1.6;
+}
+
+.pairing-block {
+  grid-column: 1 / -1;
+  padding: 1rem 1.5rem;
+  background: #fdf9f0;
+  border-top: 1px solid var(--or-light);
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+}
+
+.pairing-block .pairing-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 0.1rem; }
+
+.pairing-block .pairing-text { font-size: 0.85rem; color: var(--texte); }
+
+.pairing-block .pairing-text strong {
+  color: var(--bordeaux-dark);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+.notes-block {
+  grid-column: 1 / -1;
+  padding: 0.8rem 1.5rem;
+  background: white;
+  border-top: 1px solid var(--gris-clair);
+  font-family: var(--font-titre);
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--texte-light);
+}
+
+.notes-block::before { content: '✦ '; color: var(--or); font-style: normal; }
+
+/* ── Footer ──────────────────────────────────────────────── */
+.site-footer {
+  background: var(--bordeaux-deep);
+  color: rgba(245,240,232,0.5);
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  border-top: 2px solid var(--bordeaux-dark);
+}
+
+.site-footer span { color: var(--or); }
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .session-meta    { gap: 1rem; }
+  .wine-card-header{ flex-direction: column; align-items: flex-start; }
+  .hero-stats      { gap: 2rem; }
+  .header-nav      { display: none; }
+}
+
+/* ── Animations ──────────────────────────────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.session-card,
+.wine-card,
+.session-context {
+  animation: fadeUp 0.5s ease both;
+}
+
+.session-card:nth-child(2) { animation-delay: 0.08s; }
+.session-card:nth-child(3) { animation-delay: 0.16s; }
+.session-card:nth-child(4) { animation-delay: 0.24s; }
