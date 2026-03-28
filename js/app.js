@@ -13,6 +13,7 @@ const WINE_TYPE = {
   orange:    { label: 'Orange',    emoji: '🍊', css: 'badge-orange'    },
   pétillant: { label: 'Pétillant', emoji: '✨', css: 'badge-petillant' },
   petillant: { label: 'Pétillant', emoji: '✨', css: 'badge-petillant' },
+  liquoreux: { label: 'Liquoreux', emoji: '🍯', css: 'badge-liquoreux' },
 };
 
 // ── Calcul des statistiques globales ─────────────────────
@@ -196,7 +197,6 @@ function renderSession(sessionId) {
 
 // ── Utilitaire : éclaircit légèrement une couleur hex ─────
 function lightenColor(hex) {
-  // Convertit #rrggbb et ajoute ~40 à chaque canal
   const r = Math.min(255, parseInt(hex.slice(1,3), 16) + 40);
   const g = Math.min(255, parseInt(hex.slice(3,5), 16) + 40);
   const b = Math.min(255, parseInt(hex.slice(5,7), 16) + 40);
@@ -217,7 +217,6 @@ function navigateTo(page, id) {
 function renderPage() {
   const hash = window.location.hash;
   const main = document.getElementById('main-content');
-
   if (hash.startsWith('#session/')) {
     const id = hash.replace('#session/', '');
     main.innerHTML = renderSession(id);
@@ -247,7 +246,6 @@ function renderFooter() {
 
 // ── Init ──────────────────────────────────────────────────
 window.addEventListener('popstate', renderPage);
-
 document.addEventListener('DOMContentLoaded', () => {
   renderHeader();
   renderFooter();
