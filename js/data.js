@@ -121,13 +121,13 @@ const CLUB = {
           appellation: "Valais AOC — Grain Noble",
           region: "Valais — Suisse",
           village: "Fully, Valais",
-          type: "liquoreux",
-          grape: "Petite Arvine",
+          type: "rouge",
+          grape: "Cabernet Sauvignon, Cabernet Franc, Merlot",
           score: 82,
-          nose: "Miel, abricot confit, agrumes confits, cire d'abeille",
-          palate: "Onctueux, sucrosité intense, belle acidité pour l'équilibre, finale persistante",
-          pairing: "Foie gras, fromages bleus, desserts aux fruits jaunes",
-          notes: "Marie-Thérèse Chappaz est l'une des vigneronnes les plus célèbres de Suisse. Basée à Fully (Valais) sur 8-10 hectares en biodynamie Demeter depuis 1997, elle est l'icône absolue du vignoble helvétique. Son Grain Noble Petite Arvine a été le premier vin suisse à obtenir 100/100 de Robert Parker Wine Advocate. Élue vigneronne de l'année SVS 2021."
+          nose: "Cassis, mûre, épices douces, légère note végétale",
+          palate: "Souple, tanins fondus, fruité, finale courte",
+          pairing: "Viandes rouges, fromages à pâte mi-dure",
+          notes: "Marie-Thérèse Chappaz est l'une des vigneronnes les plus célèbres de Suisse. Basée à Fully (Valais) sur 8-10 hectares en biodynamie Demeter depuis 1997, elle est l'icône absolue du vignoble helvétique. Élue vigneronne de l'année SVS 2021."
         },
         {
           name: "L'Héritage de Chasse-Spleen 2020",
