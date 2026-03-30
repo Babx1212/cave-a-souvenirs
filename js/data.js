@@ -165,10 +165,10 @@ const CLUB = {
           type: "rouge",
           grape: "Mourvèdre",
           score: 90,
-          nose: "Garrigue, fruits noirs, épices du Sud, olive noire",
-          palate: "Charnu, généreux, finale poivrée et longue",
+          nose: "Fruits rouges mûrs, notes épicées, nuances légèrement méditerranéennes",
+          palate: "Ample et onctueux, équilibré par une belle fraîcheur. Tanins fins et poudrés, élégance et longueur, finale harmonieuse et persistante",
           pairing: "Daubes, cassoulet, viandes mijotées, fromages du Midi",
-          notes: "Cinq générations de la famille Lignères à Fontcouverte, au pied de la Montagne d'Alaric dans les Corbières. Louis Lignères fondait la maison en 1890. Certifié bio depuis 2008 et Demeter (biodynamie) depuis 2012. RVF 92 pour la cuvée phare."
+          notes: "Cuvée de parcelle sur coteaux 100% Mourvèdre. Élevage 12 mois en barriques sur lies fines avec bâtonnage hebdomadaire. Mis en bouteille sans collage ni filtration. Agriculture biologique et biodynamique (Demeter). Cinq générations de la famille Lignères à Fontcouverte, au pied de la Montagne d'Alaric. Un vin sincère et vibrant, qui révèle toute la noblesse du Mourvèdre dans un style structuré, digeste et profondément gourmand."
         },
         {
           name: "Château Guiraud 2022",
